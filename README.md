@@ -576,17 +576,17 @@ To https://gitlab-forge.ccc.ocre.cea.fr/paratools/ocean.git
 branch 'rubygem-text-downgrade-v1.3.0' set up to track 'origin/rubygem-text-downgrade-v1.3.0'.
 ```
 
-Note the following message:
+Note that the output above contains the following instructions:
 ```
 remote: To create a merge request for rubygem-text-downgrade-v1.3.0, visit:
 remote:   https://gitlab-forge.ccc.ocre.cea.fr/paratools/ocean/-/merge_requests/new?merge_request%5Bsource_branch%5D=rubygem-text-downgrade-v1.3.0
 ```
 
-Navigate to this URL in your web browser to submit the pull request. Be sure to select the correct target branch which you are requesting your changes be merged in to.
+Navigate to this URL in your web browser to submit the pull request.
+
+When submitting the pull request, be careful to select the correct target branch which you are requesting your changes be merged in to. For this example, we are targetting our changes to the default branch, master branch. If you need to target a different branch, click "Change branches". See the screenshot below.
 
 <img width="1387" height="576" alt="merge request form" src="https://github.com/user-attachments/assets/2a3021b4-2c2a-4abf-81e5-630df0b6381b" />
-
-Click "Change branches" if you need to change the target branch.
 
 <br />
 
