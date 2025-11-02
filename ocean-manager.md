@@ -12,8 +12,8 @@ This document provides instructions for using ocean-manager scripts migrated to 
 2. [Repository Commit Used in this Documentation](#2-repository-commit-used-in-this-documentation)
 3. [Nightly Build Workflow](#3-nightly-build-workflow)
 4. [Nightly Test Workflow](#4-nightly-test-workflow)
-5. Sanity Check (in progress, not-done-yet)
-6. VM Image Build (in progress, not-done-yet)
+5. [VM Image Build](#5-vm-image-build)
+6. Sanity Check (in progress, not-done-yet)
 
 <br />
 
@@ -199,5 +199,27 @@ It should only take a short period of time before the Nightly-Test-Generate job 
 Please follow the instructions in the Nightly Buid workflow section on how to schedule a pipeline run. The same steps apply to the Nightly Test Workflow. The only difference is that you must set the value of `JOBS` CI variable to include "nightly-test" instead of "nightly-build"
 
 Fill out the fields on the New Schedule page and *be sure to define the three required variables described in the Manual Trigger section* - namely: `OCEAN_BRANCH`, `CONCURRENCY`, and make sure the value of `JOBS` includes the string "nightly-build"
+
+<br />
+
+## 5. VM Image Build
+
+The Rift VM images can be built with GitLab CI by following the instructions below. These VM images are constructed according to the logic embedded in `rift vm build`.
+
+There are two required parameters that need to be specified to control the building of Rift VM's using GitLab CI:
+1. The Ocean branch used (eg. 4.4)
+2. The target hardware architecture (x86_64 or aarch64)
+
+These required parameters are specified as GitLab CI Pipeline variables when launching the pipeline either manually or on a schedule.
+1. The variable `OCEAN_BRANCH` should be set to the Ocean branch that will be used
+2. The variable `JOBS` should be set to either `vm-build-x86_64` or `vm-build-aarch64`. Alternatively, `JOBS` can be set so that both of these strings are present and separated by a space, and this will trigger VM to be built for both architectures.
+
+To manually trigger the VM build workflow, navigate to the left-hand menu and select "Build" and then select "Pipelines." Once in the pipeline view, click on the blue button labeled "New Pipeline" in the upper right. On the next screen, specify the required pipeline variables and then select the blue button in the lower left that says "New Pipeline"
+<br />
+
+<img width="1261" height="634" alt="Screenshot 2025-11-02 at 12 09 34 PM" src="https://github.com/user-attachments/assets/472dfd43-1afe-4ed8-95c7-96b1f37056bf" />
+
+<br />
+
 
 
