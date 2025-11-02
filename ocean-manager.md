@@ -249,6 +249,15 @@ The final portion of the job output should confirm the VM has been created and s
 
 <br />
 
+That the new VM image has been transferred to the Harbor can be further confirmed by manually SFTP'ing and checking:
+<br />
+
+<img width="1001" height="211" alt="Screenshot 2025-11-02 at 1 20 42 PM" src="https://github.com/user-attachments/assets/e211d50b-6b9c-4bfd-9765-7575522501da" />
+
+<br />
+
+<br />
+
 
 
 
