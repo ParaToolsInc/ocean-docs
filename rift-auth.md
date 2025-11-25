@@ -21,6 +21,15 @@ This document provides instructions for using the new `rift auth` command.
 
 `rift auth` is an enhancement to Rift that allows users to authenticate themselves and obtain credentials which enable them to access the S3 staging annex.
 
+Support for the S3 staging annex is a new feature of Rift. The feature is available upstream as part of the cea-hpc/rift project on the master branch, since the following PR is now merged:
+* [ ParaTools Enhancements to Rift for S3-Based Annex, and more #29 ](https://github.com/cea-hpc/rift/pull/29)
+
+The staging annex is defined in the Ocean project.conf via a new property:
+* (required) `staging_annex` - The HTTP(S) URL designating the S3 endpoint, bucket, and prefix to be used for the staging annex.
+  * This URL should take the following format: https://<s3-server>/<s3-bucket>/<prefix>
+
+It is important to keep in mind that `rift auth` pathway and its associated credentials are specifically for use with the S3 `staging_annex` as specified in project.conf.
+
 <br />
 
 
