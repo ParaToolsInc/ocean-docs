@@ -26,12 +26,12 @@ These settings were merged to cea-hpc/rift as part of:
 
 The following settings are new to project.conf:
 
-* `idp_app_token` (generally optional, but required if using `rift auth`)
-* `idp_auth_endpoint` (generally optional, but required if using `rift auth`)
-* `s3_credential_file` (optional)
-* `s3_auth_endpoint` (generally optional, but required if using `rift auth`)
-* `annex_is_s3` (optional, defaults to False)
-* `staging_annex` (optional, but required in order to read or write to an S3-based staging annex)
+* `idp_app_token` (string - generally optional, but required if using `rift auth`)
+* `idp_auth_endpoint` (string - generally optional, but required if using `rift auth`)
+* `s3_credential_file` (string - optional)
+* `s3_auth_endpoint` (string - generally optional, but required if using `rift auth`)
+* `annex_is_s3` (boolean - optional, defaults to False)
+* `staging_annex` (string - optional, but required in order to read or write to an S3-based staging annex)
 
 Each of these settings is explained in more detail in the sections below:
 
